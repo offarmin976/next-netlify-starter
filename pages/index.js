@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <Header title="XBLADE2 - DYNAMIC THREATS" />
         <p className="19/10/23">
-        <button onclick="location.href = 'www.xblade2.bandcamp.com';" id="myButton" class="float-left submit-button" >Home</button>
+        <button onclick="location.href = 'www.xblade2.bandcamp.com';" id="myButton" class="float-left submit-button" >LISTEN HERE</button>
         </p>
       </main>
 
