@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <Header title="XBLADE2 - DYNAMIC THREATS" />
         <p className="19/10/23">
-          Get started by editing <code>pages/index.js</code>
+          window.location.href = "http://xblade2.bandcamp.com";
         </p>
       </main>
 
