@@ -11,8 +11,8 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
-        <p className="description">
+        <Header title="XBLADE2 - DYNAMIC THREATS" />
+        <p className="19/10/23">
           Get started by editing <code>pages/index.js</code>
         </p>
       </main>
