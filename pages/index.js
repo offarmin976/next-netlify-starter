@@ -7,8 +7,8 @@ export default function Home() {
   // Funktion zum Erzeugen eines Pixel-Fehlers mit zufälliger Farbe (Schwarz oder Blau)
   function createPixelError() {
     const pixelError = document.createElement("div");
-    pixelError.style.width = "1px";
-    pixelError.style.height = "1px";
+    pixelError.style.width = "4px";
+    pixelError.style.height = "4px";
     const color = Math.random() < 0.5 ? "black" : "blue"; // Zufällige Auswahl von Schwarz oder Blau
     pixelError.style.backgroundColor = color;
     pixelError.style.position = "absolute";
