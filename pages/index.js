@@ -7,8 +7,8 @@ export default function Home() {
   // Funktion zum Erzeugen eines Pixel-Fehlers mit zufälliger Farbe (Schwarz oder Blau)
   function createPixelError() {
     const pixelError = document.createElement("div");
-    pixelError.style.width = "4px";
-    pixelError.style.height = "4px";
+    pixelError.style.width = "1px";
+    pixelError.style.height = "1px";
     const color = Math.random() < 0.5 ? "black" : "blue"; // Zufällige Auswahl von Schwarz oder Blau
     pixelError.style.backgroundColor = color;
     pixelError.style.position = "absolute";
@@ -48,6 +48,12 @@ export default function Home() {
         <Head>
           <title>Next.js Starter!</title>
           <link rel="icon" href="/CoverIG.png" />
+          {/* CSS-Regeln zur Änderung der Schriftart auf Helvetica */}
+          <style>{`
+            body {
+              font-family: "Helvetica", sans-serif;
+            }
+          `}</style>
         </Head>
 
         <main>
@@ -55,6 +61,12 @@ export default function Home() {
           <p className="19/10/23">
             <button onClick={() => window.location.href = 'https://www.xblade2.bandcamp.com'} id="myButton" className="float-left submit-button">LISTEN HERE</button>
           </p>
+          {/* Menü */}
+          <ul className="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/shop">Shop</a></li>
+          </ul>
         </main>
 
         <Footer />
