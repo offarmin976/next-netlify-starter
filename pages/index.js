@@ -3,6 +3,7 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 import { useEffect } from 'react';
 
+
 export default function Home() {
   // Funktion zum Erzeugen eines Pixel-Fehlers mit zufälliger Farbe (Schwarz oder Blau)
   function createPixelError() {
