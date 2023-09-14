@@ -56,17 +56,32 @@ export default function Home() {
           `}</style>
         </Head>
 
+        <Header title="XBLADE2 - DYNAMIC THREATS" />
+
+        {/* Bootstrap-Navigationsmenü */}
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container">
+            <a className="navbar-brand" href="/">Home</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <a className="nav-link" href="/about">About</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/shop">Shop</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
         <main>
-          <Header title="XBLADE2 - DYNAMIC THREATS" />
           <p className="19/10/23">
             <button onClick={() => window.location.href = 'https://www.xblade2.bandcamp.com'} id="myButton" className="float-left submit-button">LISTEN HERE</button>
           </p>
-          {/* Menü */}
-          <ul className="menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/shop">Shop</a></li>
-          </ul>
         </main>
 
         <Footer />
