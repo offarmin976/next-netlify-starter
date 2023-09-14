@@ -7,8 +7,8 @@ export default function Home() {
   // Funktion zum Erzeugen eines Pixel-Fehlers
   function createPixelError() {
     const pixelError = document.createElement("div");
-    pixelError.style.width = "1px";
-    pixelError.style.height = "1px";
+    pixelError.style.width = "4px";
+    pixelError.style.height = "4px";
     pixelError.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
     pixelError.style.position = "absolute";
     pixelError.style.left = `${Math.random() * window.innerWidth}px`;
