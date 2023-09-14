@@ -4,24 +4,41 @@ import Footer from '@components/Footer'
 import { useEffect } from 'react';
 
 export default function Home() {
-  // Funktion zum Erzeugen eines Pixel-Fehlers
+  // Funktion zum Erzeugen eines Pixel-Fehlers mit zufälliger Farbe (Schwarz oder Blau)
   function createPixelError() {
     const pixelError = document.createElement("div");
-    pixelError.style.width = "4px";
-    pixelError.style.height = "4px";
-    pixelError.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+    pixelError.style.width = "1px";
+    pixelError.style.height = "1px";
+    const color = Math.random() < 0.5 ? "black" : "blue"; // Zufällige Auswahl von Schwarz oder Blau
+    pixelError.style.backgroundColor = color;
     pixelError.style.position = "absolute";
     pixelError.style.left = `${Math.random() * window.innerWidth}px`;
     pixelError.style.top = `${Math.random() * window.innerHeight}px`;
     document.body.appendChild(pixelError);
   }
 
-  // Pixel-Fehler erstellen, wenn die Komponente geladen wird
+  // Pixel-Fehler erstellen und alle zwei Sekunden wechseln
   useEffect(() => {
     const numErrors = 1000; // Anzahl der simulierten Pixel-Fehler
-    for (let i = 0; i < numErrors; i++) {
-      createPixelError();
+    let intervalId;
+
+    function updateErrors() {
+      // Entfernen aller vorhandenen Fehler
+      const existingErrors = document.querySelectorAll(".pixel-error");
+      existingErrors.forEach((error) => error.remove());
+
+      // Erstellen neuer Fehler
+      for (let i = 0; i < numErrors; i++) {
+        createPixelError();
+      }
     }
+
+    // Starten des Intervalls und initialer Aufruf
+    updateErrors();
+    intervalId = setInterval(updateErrors, 2000);
+
+    // Aufräumen des Intervalls, wenn die Komponente entladen wird
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
